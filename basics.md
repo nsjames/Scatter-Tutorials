@@ -1,13 +1,13 @@
 # Creating your first Smart Contract
 
-1) Changing some settings to listen on all interfaces
+## 1) Changing some settings to listen on all interfaces
   - `sudo nano ~/.local/share/eosio/nodeos/config/config.ini`
   - Change the `http-server-address` to `0.0.0.0:8888`
   - `sudo nano ~/.bash_aliases`
   - Add a `#` in front of the `cleos` alias we set up before, we will no longer use it
   - restart `nodeos`
 
-2) Setting up the `comptract.sh` script
+## 2) Setting up the `comptract.sh` script
   - `cd ~`
   - `mkdir scripts`
   - `cd scripts`
@@ -33,11 +33,11 @@ cleos set contract ${ACCOUNT} ../${CONTRACT}
   - Add `export PATH=$PATH:~/scripts` to the end of your `~/.profile` file
   - `export PATH=$PATH:~/scripts`
 
-3) Create a new account for the `basics` contract
+## 3) Create a new account for the `basics` contract
   - `cleos create account eosio basics <PUBLIC KEY> <PUBLIC KEY>`
 
 
-4) Creating the basics contract
+## 4) Creating the basics contract
   - Make a new directory inside of your `shared_contracts` folder called `tutorials` and then another inside of that called `basics`
   - Create a new cpp file called `basics.cpp`
 
@@ -89,7 +89,7 @@ class basics : public contract {
 EOSIO_ABI( basics, (test) )
 ```
 
-4) Compiling and testing
+## 5) Compiling and testing
   - `cd /media/sf_shared_contracts/tutorials/basics/`
   - `comptract.sh basics basics`
   - `cleos push action basics test '["asdf"]' -p eosio`
