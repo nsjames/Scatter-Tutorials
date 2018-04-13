@@ -6,6 +6,8 @@ Here's some topics we'll be covering
 * Singletons
 
 
+**Edit:** After thinking about it I'm not sure if the counter would technically be atomic. There's a possibility that two actions could be pushed simultaneously creating a race condition and retrieve the same integer before the other set it. 
+
 
 ## Typedefs
 
