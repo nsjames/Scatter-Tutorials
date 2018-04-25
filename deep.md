@@ -178,7 +178,7 @@ private:
     }
 };
 
-EOSIO_ABI( deep, (setidx)(setacc)(getacc)(removeacc) )
+EOSIO_ABI( platform, (setapp)(setacc)(getacc)(removeacc) )
 ```
 
 
